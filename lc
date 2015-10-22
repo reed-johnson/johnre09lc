@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ $# -ne 2 ]
+then
+  echo "lc: usage: lc [file1] [file2]"
+  exit
+fi
+
+rm $2
+cat $1 | lowercase >> $2
