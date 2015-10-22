@@ -6,5 +6,9 @@ then
   exit
 fi
 
-rm $2
+if [ -f $2 ]
+then
+  rm $2
+fi
+
 cat $1 | lowercase >> $2
